@@ -1,0 +1,49 @@
+name: sampah_in
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.1.5 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  introduction_screen: ^3.1.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/font/
+
+  fonts:
+    - family: Outfit-Thin
+      fonts:
+        - asset: assets/font/Outfit-Thin.ttf
+
+    - family: Outfit-Light
+      fonts:
+        - asset: assets/font/Outfit-Light.ttf
+
+    - family: Outfit-Regular
+      fonts:
+        - asset: assets/font/Outfit-Regular.ttf
+
+    - family: Outfit-Medium
+      fonts:
+        - asset: assets/font/Outfit-Medium.ttf
+
+    - family: Outfit-SemiBold
+      fonts:
+        - asset: assets/font/Outfit-SemiBold.ttf
+
+    - family: Outfit-Bold
+      fonts:
+        - asset: assets/font/Outfit-Bold.ttf
