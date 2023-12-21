@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:sampah_in/view/Home/home.dart';
+import 'package:sampah_in/view/Login/login_page.dart';
 import 'package:sampah_in/view/On%20Boarding/textBody.dart';
 import 'package:sampah_in/view/On%20Boarding/textTitle.dart';
 
@@ -105,7 +106,7 @@ class _OnBoardingState extends State<OnBoarding> {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return const HomePage();
+                return const LoginPage();
               },
             ),
           );
