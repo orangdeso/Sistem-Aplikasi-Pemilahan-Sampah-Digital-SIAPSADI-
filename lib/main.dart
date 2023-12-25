@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sampah_in/view/Home/home.dart';
-import 'package:sampah_in/view/Login/login_page.dart';
 import 'package:sampah_in/view/splash_screen.dart';
 
 void main() {
@@ -14,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Sampah.In',
-      home: LoginPage(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
