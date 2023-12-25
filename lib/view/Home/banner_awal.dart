@@ -8,7 +8,7 @@ class BannerAwal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 280 / 113,
+      aspectRatio: 320 / 113,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         //padding: EdgeInsets.all(10),
@@ -43,7 +43,7 @@ class BannerAwal extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Align(
                 alignment: FractionalOffset.centerRight,
                 child: Image.asset(
@@ -54,52 +54,33 @@ class BannerAwal extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               width: 250,
               child: Column(
                 children: [
                   TextSemiBold(
                     text:
-                        "Tabungan Sampah.in Bisa Ditukarkan Dengan Berbagai Macam Produk",
+                        "Tabungan Sampahmu Bisa Ditukarkan Dengan Berbagai Macam Produk",
                     fontSize: 15,
                     color: Colors.white,
                   ),
+
                   SizedBox(
-                    height: 10,
+                    height: 6,
                   ),
                   Row(
                     children: [
                       Icon(
                         Icons.check_circle,
                         color: Colors.white,
-                        size: 12,
-                      ),
-                      SizedBox(
-                        width: 4,
-                      ),
-                      TextSemiBold(
-                        text: "Menjaga lingkungan bersih",
-                        fontSize: 10,
-                        color: Colors.white,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.check_circle,
-                        color: Colors.white,
-                        size: 12,
+                        size: 10,
                       ),
                       SizedBox(
                         width: 4,
                       ),
                       TextSemiBold(
                         text: "Bermacam Produk",
-                        fontSize: 10,
+                        fontSize: 8,
                         color: Colors.white,
                       ),
                     ],
@@ -112,18 +93,41 @@ class BannerAwal extends StatelessWidget {
                       Icon(
                         Icons.check_circle,
                         color: Colors.white,
-                        size: 12,
+                        size: 10,
                       ),
                       SizedBox(
                         width: 4,
                       ),
                       TextSemiBold(
-                        text: "Lebih Mudah",
-                        fontSize: 10,
+                        text: "Menjaga lingkungan bersih",
+                        fontSize: 8,
                         color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.check_circle,
+                            color: Colors.white,
+                            size: 10,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          TextSemiBold(
+                            text: "Lebih Mudah",
+                            fontSize: 8,
+                            color: Colors.white,
+                          ),
+                        ],
                       ),
                     ],
                   ),
+                  // SizedBox(
+                  //   height: 5,
+                  // ),
                 ],
               ),
             )

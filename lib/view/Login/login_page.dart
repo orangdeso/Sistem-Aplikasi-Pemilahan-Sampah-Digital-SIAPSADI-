@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sampah_in/component/text_medium.dart';
 import 'package:sampah_in/component/text_regular.dart';
 import 'package:sampah_in/component/text_semiBold.dart';
 import 'package:sampah_in/component/utils.dart';
+import 'package:sampah_in/view/Home/home.dart';
+import 'package:sampah_in/view/Login/AtauDivider.dart';
 import 'package:sampah_in/view/Login/InputFieldEmail.dart';
 import 'package:sampah_in/view/Login/InputFieldPassword.dart';
+import 'package:sampah_in/view/Login/OpsiLain.dart';
+import 'package:sampah_in/view/On%20Boarding/onboarding.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -20,7 +23,16 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (builder) {
+                  return const OnBoarding();
+                },
+              ),
+            );
+          },
           icon: Icon(
             Icons.arrow_back_ios_new_rounded,
             color: Colors.grey.shade800,
@@ -61,6 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (value == null || value.isEmpty) {
                     return 'Masukkan email Anda';
                   }
+                  return null;
                 },
                 keyboardType: TextInputType.emailAddress,
                 hintText: "example@gmail.com",
@@ -81,6 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                   } else if (value.length < 6) {
                     return 'Password kurang dari 6';
                   }
+                  return null;
                 },
                 keyboardType: TextInputType.emailAddress,
                 hintText: "******",
@@ -89,17 +103,86 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 10,
               ),
-              InkWell(
-                splashColor: Colors.grey,
+              Align(
+                alignment: FractionalOffset.centerRight,
                 child: Material(
                   color: Colors.transparent,
-                  child: TextMedium(
-                    text: "Lupa Password ?",
-                    fontSize: 16,
-                    color: Colors.grey.shade800,
+                  child: InkWell(
+                    onTap: () {},
+                    splashColor: Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                      child: TextMedium(
+                        text: "Lupa Password ?",
+                        fontSize: 16,
+                        color: Colors.grey.shade800,
+                      ),
+                    ),
                   ),
                 ),
               ),
+              SizedBox(
+                height: 70,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (builder) {
+                        return HomePage();
+                      },
+                    ),
+                  );
+                },
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  backgroundColor: MaterialStatePropertyAll(color1),
+                  padding: MaterialStatePropertyAll(
+                    EdgeInsets.symmetric(vertical: 10),
+                  ),
+                ),
+                child: TextSemiBold(
+                  text: "Login",
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              AtauDivider(),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  OpsiLain(
+                    imagePath: 'assets/images/facebook.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  OpsiLain(
+                    imagePath: 'assets/images/google.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  OpsiLain(
+                    imagePath: 'assets/images/twitter.png',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              )
             ],
           ),
         ),
